@@ -6,9 +6,10 @@ public class Character : MonoBehaviour
     public bool correct;
     public List<Part> bodyParts;
 
-    private void Awake()
+    public void Initialize(List<Part> bodyPart)
     {
-        foreach (var item in bodyParts)
+        bodyParts = bodyPart;
+        foreach (var item in bodyPart)
         {
             Instantiate(item, transform);
         }

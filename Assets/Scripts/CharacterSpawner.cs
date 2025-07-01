@@ -3,59 +3,80 @@ using UnityEngine;
 
 public class CharacterSpawner : MonoBehaviour
 {
-    public List<Part> bodyParts; // Harus terdiri dari 3 elemen
+    public List<BodyType> BodyTypes;
     public Character characterPrefab;
     public List<Transform> spawnPos;
     public List<Character> currentCharacters;
 
     public List<Part> correctBodyParts;
 
+    private HashSet<string> usedCombinations = new HashSet<string>();
+
     private void Awake()
     {
-        if (bodyParts.Count != 3)
+        List<Part> heads = new List<Part>();
+        List<Part> bodies = new List<Part>();
+        List<Part> feet = new List<Part>();
+
+        foreach (var bodyType in BodyTypes)
         {
-            Debug.LogError("BodyParts harus terdiri dari 3 elemen!");
-            return;
+            switch (bodyType.name.ToLower())
+            {
+                case "head":
+                    heads.AddRange(bodyType.parts);
+                    break;
+                case "body":
+                    bodies.AddRange(bodyType.parts);
+                    break;
+                case "feet":
+                    feet.AddRange(bodyType.parts);
+                    break;
+            }
         }
 
-        List<List<Part>> permutations = GetPermutations(bodyParts);
+        int maxAttempts = 100;
 
-        // Pilih permutasi secara acak
-        List<Part> selectedPermutation = permutations[Random.Range(0, permutations.Count)];
-
-        // Spawn karakter
-        Character newCharacter = Instantiate(characterPrefab, transform.position, Quaternion.identity);
-        currentCharacters.Add(newCharacter);
-        newCharacter.bodyParts = selectedPermutation;
-    }
-
-    private List<List<Part>> GetPermutations(List<Part> list)
-    {
-        List<List<Part>> results = new List<List<Part>>();
-        Permute(list, 0, results);
-        return results;
-    }
-
-    private void Permute(List<Part> list, int start, List<List<Part>> results)
-    {
-        if (start >= list.Count)
+        for (int i = 0; i < spawnPos.Count; i++)
         {
-            results.Add(new List<Part>(list));
-            return;
-        }
+            List<Part> selectedParts = null;
+            string comboKey = "";
+            int attempt = 0;
 
-        for (int i = start; i < list.Count; i++)
-        {
-            Swap(list, start, i);
-            Permute(list, start + 1, results);
-            Swap(list, start, i); // backtrack
+            // Cari kombinasi yang belum dipakai
+            while (attempt < maxAttempts)
+            {
+                Part head = heads[Random.Range(0, heads.Count)];
+                Part body = bodies[Random.Range(0, bodies.Count)];
+                Part feetPart = feet[Random.Range(0, feet.Count)];
+
+                comboKey = $"{head.GetType().Name}{head.type}-{body.GetType().Name}{body.type}-{feetPart.GetType().Name}{feetPart.type}";
+
+                if (!usedCombinations.Contains(comboKey))
+                {
+                    selectedParts = new List<Part> { head, body, feetPart };
+                    usedCombinations.Add(comboKey);
+                    break;
+                }
+
+                attempt++;
+            }
+
+            if (selectedParts == null)
+            {
+                Debug.LogWarning("Gagal menemukan kombinasi unik untuk karakter ke-" + i);
+                continue;
+            }
+
+            Character newCharacter = Instantiate(characterPrefab, spawnPos[i].position, Quaternion.identity);
+            newCharacter.Initialize(selectedParts);
+            currentCharacters.Add(newCharacter);
         }
     }
+}
 
-    private void Swap(List<Part> list, int i, int j)
-    {
-        Part temp = list[i];
-        list[i] = list[j];
-        list[j] = temp;
-    }
+[System.Serializable]
+public class BodyType
+{
+    public string name;
+    public List<Part> parts;
 }

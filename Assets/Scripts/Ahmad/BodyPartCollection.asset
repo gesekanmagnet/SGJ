@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e290b750dbc9354ca3241df5053de26, type: 3}
+  m_Name: BodyPartCollection
+  m_EditorClassIdentifier: 
+  variants:
+  - id: Skin_0
+    bodyPart: 0
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 2b2032a2d6acc2243941b9fc74e99ae1, type: 2}
+    offset: {x: 0, y: 0, z: 0}
+  - id: Skin_1
+    bodyPart: 0
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 6bb596253afbb214ba2d6da0e8571130, type: 2}
+    offset: {x: 0, y: 0, z: 0}
+  - id: Skin_2
+    bodyPart: 0
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: bd903d89b045b86488999945787dcf8c, type: 2}
+    offset: {x: 0, y: 0, z: 0}
+  - id: Skin_3
+    bodyPart: 0
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 6ddbeaa65246e21439215b4668565733, type: 2}
+    offset: {x: 0, y: 0, z: 0}
+  - id: Skin_4
+    bodyPart: 0
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 5e8ad0b170498894a83dd5698a808ab8, type: 2}
+    offset: {x: 0, y: 0, z: 0}
+  - id: Skin_5
+    bodyPart: 0
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 2c6e3c20e385fc34c95fe669ce6c03c9, type: 2}
+    offset: {x: 0, y: 0, z: 0}
+  - id: Hair_0
+    bodyPart: 1
+    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
+    material: {fileID: 2100000, guid: ff5d772ba5c5cdf44a8da75e3bbbae00, type: 2}
+    offset: {x: 0, y: -0.6, z: 0}
+  - id: Hair_1
+    bodyPart: 1
+    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
+    material: {fileID: 2100000, guid: 273844622f15c5741aa4b49259a709fe, type: 2}
+    offset: {x: 0, y: -0.6, z: 0}
+  - id: Hair_2
+    bodyPart: 1
+    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
+    material: {fileID: 2100000, guid: e5cae26cb4006584681284cd8359c4a9, type: 2}
+    offset: {x: 0, y: -0.6, z: 0}
+  - id: Hair_3
+    bodyPart: 1
+    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
+    material: {fileID: 2100000, guid: d9fcf16036ad671459ed6f0bf9b67bd7, type: 2}
+    offset: {x: 0, y: -0.6, z: 0}
+  - id: Hair_4
+    bodyPart: 1
+    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
+    material: {fileID: 2100000, guid: c6c49772a0d45f54e9b1b36940224928, type: 2}
+    offset: {x: 0, y: -0.6, z: 0}
+  - id: Hair_5
+    bodyPart: 1
+    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
+    material: {fileID: 2100000, guid: 2b2032a2d6acc2243941b9fc74e99ae1, type: 2}
+    offset: {x: 0, y: -0.6, z: 0}
+  - id: Face_0
+    bodyPart: 2
+    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
+    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
+    offset: {x: 0, y: -0.6, z: 0.05}
+  - id: Face_1
+    bodyPart: 2
+    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
+    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
+    offset: {x: 0, y: -0.6, z: 0.05}
+  - id: Face_2
+    bodyPart: 2
+    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
+    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
+    offset: {x: 0, y: -0.6, z: 0.05}
+  - id: Face_3
+    bodyPart: 2
+    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
+    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
+    offset: {x: 0, y: -0.6, z: 0.05}
+  - id: Face_5
+    bodyPart: 2
+    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
+    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
+    offset: {x: 0, y: -0.6, z: 0.05}
+  - id: Face_4
+    bodyPart: 2
+    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
+    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
+    offset: {x: 0, y: -0.6, z: 0.05}

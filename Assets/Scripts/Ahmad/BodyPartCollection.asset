@@ -12,94 +12,195 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e290b750dbc9354ca3241df5053de26, type: 3}
   m_Name: BodyPartCollection
   m_EditorClassIdentifier: 
-  variants:
+  skins:
   - id: Skin_0
-    bodyPart: 0
-    mesh: {fileID: 0}
-    material: {fileID: 2100000, guid: 2b2032a2d6acc2243941b9fc74e99ae1, type: 2}
-    offset: {x: 0, y: 0, z: 0}
-  - id: Skin_1
-    bodyPart: 0
-    mesh: {fileID: 0}
-    material: {fileID: 2100000, guid: 6bb596253afbb214ba2d6da0e8571130, type: 2}
-    offset: {x: 0, y: 0, z: 0}
-  - id: Skin_2
-    bodyPart: 0
-    mesh: {fileID: 0}
-    material: {fileID: 2100000, guid: bd903d89b045b86488999945787dcf8c, type: 2}
-    offset: {x: 0, y: 0, z: 0}
-  - id: Skin_3
-    bodyPart: 0
-    mesh: {fileID: 0}
-    material: {fileID: 2100000, guid: 6ddbeaa65246e21439215b4668565733, type: 2}
-    offset: {x: 0, y: 0, z: 0}
-  - id: Skin_4
-    bodyPart: 0
-    mesh: {fileID: 0}
-    material: {fileID: 2100000, guid: 5e8ad0b170498894a83dd5698a808ab8, type: 2}
-    offset: {x: 0, y: 0, z: 0}
-  - id: Skin_5
-    bodyPart: 0
-    mesh: {fileID: 0}
+    icon: {fileID: -573698901, guid: 0a307411754d08a45911a73294806b2c, type: 3}
     material: {fileID: 2100000, guid: 2c6e3c20e385fc34c95fe669ce6c03c9, type: 2}
-    offset: {x: 0, y: 0, z: 0}
+  - id: Skin_1
+    icon: {fileID: -301779517, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 5e8ad0b170498894a83dd5698a808ab8, type: 2}
+  - id: Skin_2
+    icon: {fileID: 715529707, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 6ddbeaa65246e21439215b4668565733, type: 2}
+  - id: Skin_3
+    icon: {fileID: -1764505090, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: bd903d89b045b86488999945787dcf8c, type: 2}
+  - id: Skin_4
+    icon: {fileID: -700252046, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 6bb596253afbb214ba2d6da0e8571130, type: 2}
+  - id: Skin_5
+    icon: {fileID: -1286428310, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 2b2032a2d6acc2243941b9fc74e99ae1, type: 2}
+  hairs:
   - id: Hair_0
-    bodyPart: 1
-    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
-    material: {fileID: 2100000, guid: ff5d772ba5c5cdf44a8da75e3bbbae00, type: 2}
-    offset: {x: 0, y: -0.6, z: 0}
+    icon: {fileID: 734134047, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 1242328779020302974, guid: 6611479788551b543b7d157d3155d02d, type: 3}
+    offset: {x: 0, y: -0.6, z: 0.01}
   - id: Hair_1
-    bodyPart: 1
-    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
-    material: {fileID: 2100000, guid: 273844622f15c5741aa4b49259a709fe, type: 2}
-    offset: {x: 0, y: -0.6, z: 0}
+    icon: {fileID: 733544976, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 6685692946555776331, guid: 0a90c9e7ce3b1ed4cb93934133849ac4, type: 3}
+    offset: {x: 0, y: -0.6, z: 0.01}
   - id: Hair_2
-    bodyPart: 1
-    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
-    material: {fileID: 2100000, guid: e5cae26cb4006584681284cd8359c4a9, type: 2}
-    offset: {x: 0, y: -0.6, z: 0}
+    icon: {fileID: 721331145, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 5620730488656549589, guid: 597677e7ded22c8459ce1e2c5229b42a, type: 3}
+    offset: {x: 0, y: -0.6, z: 0.01}
   - id: Hair_3
-    bodyPart: 1
-    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
-    material: {fileID: 2100000, guid: d9fcf16036ad671459ed6f0bf9b67bd7, type: 2}
+    icon: {fileID: -1985395116, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 7809868016884191176, guid: 1255c74a0150634488d2f2fffda2d6fd, type: 3}
     offset: {x: 0, y: -0.6, z: 0}
   - id: Hair_4
-    bodyPart: 1
-    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
-    material: {fileID: 2100000, guid: c6c49772a0d45f54e9b1b36940224928, type: 2}
+    icon: {fileID: 1291053606, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 7732715531668937727, guid: d6065fddc11a8dc4296d88d8781bf851, type: 3}
     offset: {x: 0, y: -0.6, z: 0}
   - id: Hair_5
-    bodyPart: 1
-    mesh: {fileID: 919132149155446097, guid: f1fa3566a211a304a9572b326506edab, type: 3}
-    material: {fileID: 2100000, guid: 2b2032a2d6acc2243941b9fc74e99ae1, type: 2}
+    icon: {fileID: 1526173105, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 6895655211042007124, guid: 9eccecf07ba7c8e42bec7d39109a0050, type: 3}
     offset: {x: 0, y: -0.6, z: 0}
+  faces:
   - id: Face_0
-    bodyPart: 2
-    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
+    icon: {fileID: -347353650, guid: 0a307411754d08a45911a73294806b2c, type: 3}
     material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
-    offset: {x: 0, y: -0.6, z: 0.05}
   - id: Face_1
-    bodyPart: 2
-    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
-    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
-    offset: {x: 0, y: -0.6, z: 0.05}
+    icon: {fileID: 864213898, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: a698cf19ff1a3ee4198f73e96c8c9a6e, type: 2}
   - id: Face_2
-    bodyPart: 2
-    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
-    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
-    offset: {x: 0, y: -0.6, z: 0.05}
+    icon: {fileID: 1639415365, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 0b83671e69085f343aee52f400fdee29, type: 2}
   - id: Face_3
-    bodyPart: 2
-    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
-    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
-    offset: {x: 0, y: -0.6, z: 0.05}
-  - id: Face_5
-    bodyPart: 2
-    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
-    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
-    offset: {x: 0, y: -0.6, z: 0.05}
+    icon: {fileID: 1577670984, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 7f5a11807a8376c41aa75b4c99cbb673, type: 2}
   - id: Face_4
-    bodyPart: 2
-    mesh: {fileID: 919132149155446097, guid: ed7f5fabdcc2ecf4888789c01b5d2613, type: 3}
-    material: {fileID: 2100000, guid: 04f74f1e1954c6f4bb3d859801f9231a, type: 2}
-    offset: {x: 0, y: -0.6, z: 0.05}
+    icon: {fileID: 352974328, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 7442a330d3c7cc9429fb317dbed2d0d5, type: 2}
+  - id: Face_5
+    icon: {fileID: -1630600720, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    material: {fileID: 2100000, guid: 48eebccfc2675124a942de875024394c, type: 2}
+  clothes:
+  - id: Cloth_0
+    icon: {fileID: -1317979023, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    bodyPrefab: {fileID: 0}
+    armPrefab: {fileID: 0}
+    bodyOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0, z: 0}
+    armRightOffset: {x: 0, y: 0, z: 0}
+  - id: Cloth_1
+    icon: {fileID: -1134420601, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    bodyPrefab: {fileID: 0}
+    armPrefab: {fileID: 0}
+    bodyOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0, z: 0}
+    armRightOffset: {x: 0, y: 0, z: 0}
+  - id: Cloth_2
+    icon: {fileID: 860147802, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    bodyPrefab: {fileID: 0}
+    armPrefab: {fileID: 0}
+    bodyOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0, z: 0}
+    armRightOffset: {x: 0, y: 0, z: 0}
+  - id: Cloth_3
+    icon: {fileID: 588648477, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    bodyPrefab: {fileID: 0}
+    armPrefab: {fileID: 0}
+    bodyOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0, z: 0}
+    armRightOffset: {x: 0, y: 0, z: 0}
+  - id: Cloth_4
+    icon: {fileID: -804895532, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    bodyPrefab: {fileID: 0}
+    armPrefab: {fileID: 0}
+    bodyOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0, z: 0}
+    armRightOffset: {x: 0, y: 0, z: 0}
+  - id: Cloth_5
+    icon: {fileID: 916947431, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    bodyPrefab: {fileID: 0}
+    armPrefab: {fileID: 0}
+    bodyOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0, z: 0}
+    armRightOffset: {x: 0, y: 0, z: 0}
+  pants:
+  - id: Pants_0
+    icon: {fileID: -860618347, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    hipPrefab: {fileID: 0}
+    legPrefab: {fileID: 0}
+    hipOffset: {x: 0, y: 0, z: 0}
+    legLeftOffset: {x: 0, y: 0, z: 0}
+    legRightOffset: {x: 0, y: 0, z: 0}
+  - id: Pants_1
+    icon: {fileID: -861139374, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    hipPrefab: {fileID: 0}
+    legPrefab: {fileID: 0}
+    hipOffset: {x: 0, y: 0, z: 0}
+    legLeftOffset: {x: 0, y: 0, z: 0}
+    legRightOffset: {x: 0, y: 0, z: 0}
+  - id: Pants_2
+    icon: {fileID: 28607028, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    hipPrefab: {fileID: 0}
+    legPrefab: {fileID: 0}
+    hipOffset: {x: 0, y: 0, z: 0}
+    legLeftOffset: {x: 0, y: 0, z: 0}
+    legRightOffset: {x: 0, y: 0, z: 0}
+  - id: Pants_3
+    icon: {fileID: 353294593, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    hipPrefab: {fileID: 0}
+    legPrefab: {fileID: 0}
+    hipOffset: {x: 0, y: 0, z: 0}
+    legLeftOffset: {x: 0, y: 0, z: 0}
+    legRightOffset: {x: 0, y: 0, z: 0}
+  - id: Pants_4
+    icon: {fileID: 580350218, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    hipPrefab: {fileID: 0}
+    legPrefab: {fileID: 0}
+    hipOffset: {x: 0, y: 0, z: 0}
+    legLeftOffset: {x: 0, y: 0, z: 0}
+    legRightOffset: {x: 0, y: 0, z: 0}
+  - id: Pants_5
+    icon: {fileID: -2028013414, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    hipPrefab: {fileID: 0}
+    legPrefab: {fileID: 0}
+    hipOffset: {x: 0, y: 0, z: 0}
+    legLeftOffset: {x: 0, y: 0, z: 0}
+    legRightOffset: {x: 0, y: 0, z: 0}
+  shoes:
+  - id: Shoes_0
+    icon: {fileID: -1465978277, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 3040354047790951602, guid: a9746b73ceea84743b435073a8bdbfeb, type: 3}
+    shoeLeftPosOffset: {x: -0.0424, y: 0.0725, z: 0.035}
+    shoeLeftRotOffset: {x: -0.6524441, y: -0.047854945, z: -0.6779032, w: 0.3353712}
+    shoeRightPosOffset: {x: 0.056, y: 0.1, z: 0.095}
+    shoeRightRotOffset: {x: -0.8182332, y: 0.0852703, z: 0.41472962, w: 0.38887355}
+  - id: Shoes_1
+    icon: {fileID: 575071823, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 3040354047790951602, guid: 7b8d83303789fec4b96d2ccec305caf0, type: 3}
+    shoeLeftPosOffset: {x: -0.0424, y: 0.0725, z: 0.035}
+    shoeLeftRotOffset: {x: -0.6524441, y: -0.047854945, z: -0.6779032, w: 0.3353712}
+    shoeRightPosOffset: {x: 0.056, y: 0.1, z: 0.095}
+    shoeRightRotOffset: {x: -0.8182332, y: 0.0852703, z: 0.41472962, w: 0.38887355}
+  - id: Shoes_2
+    icon: {fileID: 563399039, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 3040354047790951602, guid: e244b19c564137b40acbbd26dc9e1d4b, type: 3}
+    shoeLeftPosOffset: {x: -0.0424, y: 0.0725, z: 0.035}
+    shoeLeftRotOffset: {x: -0.6524441, y: -0.047854945, z: -0.6779032, w: 0.3353712}
+    shoeRightPosOffset: {x: 0.056, y: 0.1, z: 0.095}
+    shoeRightRotOffset: {x: -0.8182332, y: 0.0852703, z: 0.41472962, w: 0.38887355}
+  - id: Shoes_3
+    icon: {fileID: -592585923, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 3040354047790951602, guid: 83eddc7584f9b7a428e7ebb19bf478dd, type: 3}
+    shoeLeftPosOffset: {x: -0.0424, y: 0.0725, z: 0.035}
+    shoeLeftRotOffset: {x: -0.6524441, y: -0.047854945, z: -0.6779032, w: 0.3353712}
+    shoeRightPosOffset: {x: 0.056, y: 0.1, z: 0.095}
+    shoeRightRotOffset: {x: -0.8182332, y: 0.0852703, z: 0.41472962, w: 0.38887355}
+  - id: Shoes_4
+    icon: {fileID: 992797017, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 3040354047790951602, guid: 1befc2ff5c4f080468ad256e4a90eb7c, type: 3}
+    shoeLeftPosOffset: {x: -0.0424, y: 0.0725, z: 0.035}
+    shoeLeftRotOffset: {x: -0.6524441, y: -0.047854945, z: -0.6779032, w: 0.3353712}
+    shoeRightPosOffset: {x: 0.056, y: 0.1, z: 0.095}
+    shoeRightRotOffset: {x: -0.8182332, y: 0.0852703, z: 0.41472962, w: 0.38887355}
+  - id: Shoes_5
+    icon: {fileID: -1516026631, guid: 0a307411754d08a45911a73294806b2c, type: 3}
+    prefab: {fileID: 3040354047790951602, guid: e6373cab372272244b170c8ad45b0626, type: 3}
+    shoeLeftPosOffset: {x: -0.0424, y: 0.0725, z: 0.035}
+    shoeLeftRotOffset: {x: -0.6524441, y: -0.047854945, z: -0.6779032, w: 0.3353712}
+    shoeRightPosOffset: {x: 0.056, y: 0.1, z: 0.095}
+    shoeRightRotOffset: {x: -0.8182332, y: 0.0852703, z: 0.41472962, w: 0.38887355}

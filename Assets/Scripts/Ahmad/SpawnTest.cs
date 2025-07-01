@@ -12,10 +12,6 @@ public class SpawnTest : MonoBehaviour
 
     private void Start()
     {
-        var skins = bodyPartCollection.variants.FindAll(v => v.bodyPart == Variant.BodyPart.Skin);
-        var hairs = bodyPartCollection.variants.FindAll(v => v.bodyPart == Variant.BodyPart.Hair);
-        var faces = bodyPartCollection.variants.FindAll(v => v.bodyPart == Variant.BodyPart.Face);
-
         for (int i = 0; i < spawnCount; i++)
         {
             var pos = new Vector3(Random.Range(spawnRangeX.x, spawnRangeX.y), 1, Random.Range(spawnRangeZ.x, spawnRangeZ.y));
@@ -23,17 +19,20 @@ public class SpawnTest : MonoBehaviour
             
             var characterComponent = obj.GetComponent<CharacterComponent>();
             
-            var skin = skins[Random.Range(0, skins.Count)];
-            var hair = hairs[Random.Range(0, hairs.Count)];
-            var face = faces[Random.Range(0, faces.Count)];
+            var skin = bodyPartCollection.skins[Random.Range(0, bodyPartCollection.skins.Count)];
+            var hair = bodyPartCollection.hairs[Random.Range(0, bodyPartCollection.hairs.Count)];
+            var face = bodyPartCollection.faces[Random.Range(0, bodyPartCollection.faces.Count)];
+            var shoe = bodyPartCollection.shoes[Random.Range(0, bodyPartCollection.shoes.Count)];
 
             characterComponent.InitSkin(skin);
             characterComponent.InitHair(hair);
-            characterComponent.InitHair(face);
+            characterComponent.InitFace(face);
+            characterComponent.InitShoes(shoe);
 
             ids.Add(skin.id);
             ids.Add(hair.id);
             ids.Add(face.id);
+            ids.Add(shoe.id);
         }
     }
 }

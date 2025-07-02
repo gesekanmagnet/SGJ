@@ -12,6 +12,8 @@ public class CharacterComponent : MonoBehaviour
     public Transform shoesRightParent;
     public List<string> ids;
 
+    public List<Variant> variants;
+
     public void InitSkin(SkinData skin)
     {
         foreach (var skinComponent in skinComponents)
@@ -20,6 +22,7 @@ public class CharacterComponent : MonoBehaviour
         }
 
         ids.Add(skin.id);
+        variants.Add(skin);
     }
 
     public void InitHair(HairData hair)
@@ -28,6 +31,7 @@ public class CharacterComponent : MonoBehaviour
         obj.transform.localPosition = hair.offset;
 
         ids.Add(hair.id);
+        variants.Add(hair);
     }
 
     public void InitFace(FaceData face)
@@ -35,6 +39,7 @@ public class CharacterComponent : MonoBehaviour
         faceComponent.materials = new Material[] { face.material };
 
         ids.Add(face.id);
+        variants.Add(face);
     }
 
     public void InitShoes(ShoesData shoes)
@@ -48,5 +53,6 @@ public class CharacterComponent : MonoBehaviour
         objR.transform.localRotation = shoes.shoeRightRotOffset;
 
         ids.Add(shoes.id);
+        variants.Add(shoes);
     }
 }

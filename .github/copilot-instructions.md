@@ -2,7 +2,7 @@
 - Project name: SGJ
 - Unity version: Unity 2021.3.43f1
 - Active game object:
-  - Name: Spawn Character
+  - Name: Image (2)
   - Tag: Untagged
-  - Layer: Default
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

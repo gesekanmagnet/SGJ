@@ -55,7 +55,7 @@ public class Trajectory : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         Debug.Log(power);
         Rigidbody ball = Instantiate(this.ball, spawnPos.position, Quaternion.identity);
         ball.gameObject.SetActive(true);
-        Vector3 direction = Quaternion.Euler(new(0, 45 - finalRotation.eulerAngles.z, 0)) * Vector3.forward;
+        Vector3 direction = Quaternion.Euler(new(0, -finalRotation.eulerAngles.z, 0)) * Vector3.forward;
         ball.AddForce(direction.normalized * power * 2, ForceMode.Impulse);
     }
 }

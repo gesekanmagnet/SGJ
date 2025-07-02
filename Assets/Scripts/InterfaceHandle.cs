@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,8 @@ public class InterfaceHandle : MonoBehaviour
 {
     public Image[] imageIcons;
     public CharacterSpawner spawner;
+
+    public TMP_Text scoreText;
 
     private void Start()
     {
@@ -24,4 +27,16 @@ public class InterfaceHandle : MonoBehaviour
             imageIcons[i].sprite = tempList[i].icon;
         }
     }
+
+    private void OnEnable()
+    {
+        EventCallback.OnScore += UpdateScore;
+    }
+
+    private void OnDisable()
+    {
+        EventCallback.OnScore -= UpdateScore;
+    }
+
+    private void UpdateScore(float timeScore) => scoreText.text = timeScore.ToString("F2");
 }

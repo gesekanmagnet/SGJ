@@ -78,87 +78,87 @@ MonoBehaviour:
   clothes:
   - id: Cloth_0
     icon: {fileID: -1317979023, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    bodyPrefab: {fileID: 0}
-    armPrefab: {fileID: 0}
+    bodyPrefab: {fileID: 5550104030588566607, guid: 8c2436e605f069b4c98acc24a4bb53ca, type: 3}
+    armPrefab: {fileID: 5666212389921281527, guid: d1b498eaaf8744d40a126499c2966760, type: 3}
     bodyOffset: {x: 0, y: 0, z: 0}
-    armLeftOffset: {x: 0, y: 0, z: 0}
-    armRightOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0.06, z: 0}
+    armRightOffset: {x: 0, y: 0.06, z: 0}
   - id: Cloth_1
     icon: {fileID: -1134420601, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    bodyPrefab: {fileID: 0}
-    armPrefab: {fileID: 0}
+    bodyPrefab: {fileID: 5550104030588566607, guid: bb86b1a26bd0c4e458eebd614247cc05, type: 3}
+    armPrefab: {fileID: 5666212389921281527, guid: 0238139997cc12a4481cc0c0312f462b, type: 3}
     bodyOffset: {x: 0, y: 0, z: 0}
-    armLeftOffset: {x: 0, y: 0, z: 0}
-    armRightOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0.06, z: 0}
+    armRightOffset: {x: 0, y: 0.06, z: 0}
   - id: Cloth_2
     icon: {fileID: 860147802, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    bodyPrefab: {fileID: 0}
-    armPrefab: {fileID: 0}
+    bodyPrefab: {fileID: 5550104030588566607, guid: f3ca85f5f23826c4894aebfc22d8bd54, type: 3}
+    armPrefab: {fileID: 5666212389921281527, guid: 3eb3a5b0f5066a84fb3dbaca8e3ee405, type: 3}
     bodyOffset: {x: 0, y: 0, z: 0}
-    armLeftOffset: {x: 0, y: 0, z: 0}
-    armRightOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0.06, z: 0}
+    armRightOffset: {x: 0, y: 0.06, z: 0}
   - id: Cloth_3
     icon: {fileID: 588648477, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    bodyPrefab: {fileID: 0}
-    armPrefab: {fileID: 0}
+    bodyPrefab: {fileID: 5550104030588566607, guid: 38abae88ca6ae89409c4136399f76921, type: 3}
+    armPrefab: {fileID: 5666212389921281527, guid: aca01fe187469134183e2e7f32da2002, type: 3}
     bodyOffset: {x: 0, y: 0, z: 0}
-    armLeftOffset: {x: 0, y: 0, z: 0}
-    armRightOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0.06, z: 0}
+    armRightOffset: {x: 0, y: 0.06, z: 0}
   - id: Cloth_4
     icon: {fileID: -804895532, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    bodyPrefab: {fileID: 0}
-    armPrefab: {fileID: 0}
+    bodyPrefab: {fileID: 5550104030588566607, guid: 03d1c32013bc0ce4f813b5f23a62a618, type: 3}
+    armPrefab: {fileID: 5666212389921281527, guid: 2ad22714d57489a40ad5009f406bcae2, type: 3}
     bodyOffset: {x: 0, y: 0, z: 0}
-    armLeftOffset: {x: 0, y: 0, z: 0}
-    armRightOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0.06, z: 0}
+    armRightOffset: {x: 0, y: 0.06, z: 0}
   - id: Cloth_5
     icon: {fileID: 916947431, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    bodyPrefab: {fileID: 0}
-    armPrefab: {fileID: 0}
+    bodyPrefab: {fileID: 5550104030588566607, guid: 71c6015a2e791d6469559cee990503bd, type: 3}
+    armPrefab: {fileID: 5666212389921281527, guid: 063a29fba5292a14bac2a1cfd1aa8e94, type: 3}
     bodyOffset: {x: 0, y: 0, z: 0}
-    armLeftOffset: {x: 0, y: 0, z: 0}
-    armRightOffset: {x: 0, y: 0, z: 0}
+    armLeftOffset: {x: 0, y: 0.06, z: 0}
+    armRightOffset: {x: 0, y: 0.06, z: 0}
   pants:
   - id: Pants_0
     icon: {fileID: -860618347, guid: 0a307411754d08a45911a73294806b2c, type: 3}
     hipPrefab: {fileID: 0}
-    legPrefab: {fileID: 0}
+    legPrefab: {fileID: 2946721717298134835, guid: 1220fde78d5909047bcec50a77c98057, type: 3}
     hipOffset: {x: 0, y: 0, z: 0}
     legLeftOffset: {x: 0, y: 0, z: 0}
     legRightOffset: {x: 0, y: 0, z: 0}
   - id: Pants_1
     icon: {fileID: -861139374, guid: 0a307411754d08a45911a73294806b2c, type: 3}
     hipPrefab: {fileID: 0}
-    legPrefab: {fileID: 0}
+    legPrefab: {fileID: 2946721717298134835, guid: d29a3e8cd1d431b4cbdf05d434e96f76, type: 3}
     hipOffset: {x: 0, y: 0, z: 0}
     legLeftOffset: {x: 0, y: 0, z: 0}
     legRightOffset: {x: 0, y: 0, z: 0}
   - id: Pants_2
     icon: {fileID: 28607028, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    hipPrefab: {fileID: 0}
+    hipPrefab: {fileID: 2031573597844269012, guid: 563e78350b795b44286f57e1804b8652, type: 3}
     legPrefab: {fileID: 0}
-    hipOffset: {x: 0, y: 0, z: 0}
+    hipOffset: {x: 0, y: -0.06, z: -0.06}
     legLeftOffset: {x: 0, y: 0, z: 0}
     legRightOffset: {x: 0, y: 0, z: 0}
   - id: Pants_3
     icon: {fileID: 353294593, guid: 0a307411754d08a45911a73294806b2c, type: 3}
     hipPrefab: {fileID: 0}
-    legPrefab: {fileID: 0}
+    legPrefab: {fileID: 1240046149301126618, guid: e08927e119839544babbf5fcf4cfa8cb, type: 3}
     hipOffset: {x: 0, y: 0, z: 0}
     legLeftOffset: {x: 0, y: 0, z: 0}
     legRightOffset: {x: 0, y: 0, z: 0}
   - id: Pants_4
     icon: {fileID: 580350218, guid: 0a307411754d08a45911a73294806b2c, type: 3}
     hipPrefab: {fileID: 0}
-    legPrefab: {fileID: 0}
+    legPrefab: {fileID: 1240046149301126618, guid: 16bf6d7865646144bb1be2348c601182, type: 3}
     hipOffset: {x: 0, y: 0, z: 0}
     legLeftOffset: {x: 0, y: 0, z: 0}
     legRightOffset: {x: 0, y: 0, z: 0}
   - id: Pants_5
     icon: {fileID: -2028013414, guid: 0a307411754d08a45911a73294806b2c, type: 3}
-    hipPrefab: {fileID: 0}
+    hipPrefab: {fileID: 2031573597844269012, guid: b358bd5b6ccd6c44cb6b64f3049b4680, type: 3}
     legPrefab: {fileID: 0}
-    hipOffset: {x: 0, y: 0, z: 0}
+    hipOffset: {x: 0, y: -0.06, z: -0.06}
     legLeftOffset: {x: 0, y: 0, z: 0}
     legRightOffset: {x: 0, y: 0, z: 0}
   shoes:

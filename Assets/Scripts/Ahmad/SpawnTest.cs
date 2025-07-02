@@ -14,7 +14,7 @@ public class SpawnTest : MonoBehaviour
     {
         for (int i = 0; i < spawnCount; i++)
         {
-            var pos = new Vector3(Random.Range(spawnRangeX.x, spawnRangeX.y), 1, Random.Range(spawnRangeZ.x, spawnRangeZ.y));
+            var pos = new Vector3(Random.Range(spawnRangeX.x, spawnRangeX.y), 0, Random.Range(spawnRangeZ.x, spawnRangeZ.y));
             var obj = Instantiate(characterPrefab.gameObject, pos, Quaternion.identity);
             
             var characterComponent = obj.GetComponent<CharacterComponent>();
@@ -22,16 +22,22 @@ public class SpawnTest : MonoBehaviour
             var skin = bodyPartCollection.skins[Random.Range(0, bodyPartCollection.skins.Count)];
             var hair = bodyPartCollection.hairs[Random.Range(0, bodyPartCollection.hairs.Count)];
             var face = bodyPartCollection.faces[Random.Range(0, bodyPartCollection.faces.Count)];
+            var cloth = bodyPartCollection.clothes[Random.Range(0, bodyPartCollection.clothes.Count)];
+            var pants = bodyPartCollection.pants[Random.Range(0, bodyPartCollection.pants.Count)];
             var shoe = bodyPartCollection.shoes[Random.Range(0, bodyPartCollection.shoes.Count)];
 
             characterComponent.InitSkin(skin);
             characterComponent.InitHair(hair);
             characterComponent.InitFace(face);
+            characterComponent.InitCloth(cloth);
+            characterComponent.InitPants(pants);
             characterComponent.InitShoes(shoe);
 
             ids.Add(skin.id);
             ids.Add(hair.id);
             ids.Add(face.id);
+            ids.Add(cloth.id);
+            ids.Add(pants.id);
             ids.Add(shoe.id);
         }
     }

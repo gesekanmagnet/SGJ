@@ -8,6 +8,12 @@ public class CharacterComponent : MonoBehaviour
     public Renderer faceComponent;
     public Transform headParent;
     public Transform faceParent;
+    public Transform bodyParent;
+    public Transform armLeftParent;
+    public Transform armRightParent;
+    public Transform hipParent;
+    public Transform legLeftParent;
+    public Transform legRightParent;
     public Transform shoesLeftParent;
     public Transform shoesRightParent;
     public List<string> ids;
@@ -40,6 +46,41 @@ public class CharacterComponent : MonoBehaviour
 
         ids.Add(face.id);
         variants.Add(face);
+    }
+
+    public void InitCloth(ClothData cloth)
+    {
+        GameObject obj = Instantiate(cloth.bodyPrefab, bodyParent);
+        obj.transform.localPosition = cloth.bodyOffset;
+
+        GameObject objL = Instantiate(cloth.armPrefab, armLeftParent);
+        objL.transform.localPosition = cloth.armLeftOffset;
+
+        GameObject objR = Instantiate(cloth.armPrefab, armRightParent);
+        objR.transform.localPosition = cloth.armRightOffset;
+
+        ids.Add(cloth.id);
+        variants.Add(cloth);
+    }
+
+    public void InitPants(PantsData pants)
+    {
+        if (pants.legPrefab != null)
+        {
+            GameObject objL = Instantiate(pants.legPrefab, legLeftParent);
+            objL.transform.localPosition = pants.legLeftOffset;
+
+            GameObject objR = Instantiate(pants.legPrefab, legRightParent);
+            objR.transform.localPosition = pants.legRightOffset;
+        }
+
+        if (pants.hipPrefab != null)
+        {
+            GameObject obj = Instantiate(pants.hipPrefab, hipParent);
+            obj.transform.localPosition = pants.hipOffset;
+        }
+
+        ids.Add(pants.id);
     }
 
     public void InitShoes(ShoesData shoes)

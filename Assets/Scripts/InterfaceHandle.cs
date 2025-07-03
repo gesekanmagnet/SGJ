@@ -25,6 +25,8 @@ public class InterfaceHandle : MonoBehaviour
         for (int i = 0; i < imageIcons.Length && i < tempList.Count; i++)
         {
             imageIcons[i].sprite = tempList[i].icon;
+            string displayText = tempList[i].id.Split('_')[0];
+            imageIcons[i].GetComponentInChildren<TMP_Text>().text = displayText;
         }
     }
 

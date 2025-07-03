@@ -16,22 +16,30 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        CustomCursor.Instance.targetToLookAt = transform;
+        timer = maxTimer;
+    }
+
     private void Update()
     {
-        if (timer < maxTimer)
-            timer += Time.deltaTime;
+        if (timer > 0)
+            timer -= Time.deltaTime;
         else
         {
             EventCallback.OnGameOver(GameResult.Lose);
+            rb.velocity = Vector3.zero;
             portal.Stop();
+            enabled = false;
         }
+
+        EventCallback.OnScore(Mathf.Max(0, timer));
 
         if (Input.GetMouseButtonDown(0) && rb.velocity != Vector3.zero)
         {
             if (triggerCondition)
             {
-                Debug.Log("score: " + timer);
-                EventCallback.OnScore(timer);
                 EventCallback.OnGameOver(GameResult.Win);
             }
             else
@@ -40,6 +48,7 @@ public class Ball : MonoBehaviour
             rb.velocity = Vector3.zero;
             portal.Stop();
             release.Play();
+            enabled = false;
         }
     }
 
@@ -48,6 +57,7 @@ public class Ball : MonoBehaviour
         if(other.TryGetComponent<CharacterComponent>(out var character))
         {
             triggerCondition = character == spawner.correctCharacter;
+            CustomCursor.Instance.SetCursorSprite(CursorState.Target);
         }
     }
 
@@ -56,6 +66,7 @@ public class Ball : MonoBehaviour
         if (other.TryGetComponent<CharacterComponent>(out var character))
         {
             if(character == spawner.correctCharacter) triggerCondition = false;
+            CustomCursor.Instance.SetCursorSprite(CursorState.Arrow);
         }
     }
 }

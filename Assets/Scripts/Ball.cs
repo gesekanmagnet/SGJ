@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -6,10 +7,11 @@ public class Ball : MonoBehaviour
     public ParticleSystem portal, release;
 
     private Rigidbody rb;
+    private CharacterComponent character;
 
     public float timer;
     public float maxTimer = 5f;
-    public bool triggerCondition;
+    public bool triggerCondition, capture;
 
     private void Awake()
     {
@@ -36,7 +38,7 @@ public class Ball : MonoBehaviour
 
         EventCallback.OnScore(Mathf.Max(0, timer));
 
-        if (Input.GetMouseButtonDown(0) && rb.velocity != Vector3.zero)
+        if (Input.GetMouseButtonDown(0) && rb.velocity != Vector3.zero && capture)
         {
             if (triggerCondition)
             {
@@ -45,9 +47,10 @@ public class Ball : MonoBehaviour
             else
                 EventCallback.OnGameOver(GameResult.Lose);
 
+            character.transform.DOMoveY(-1, 1);
             rb.velocity = Vector3.zero;
             portal.Stop();
-            release.Play();
+            Instantiate(release, character.transform.position, Quaternion.identity);
             enabled = false;
         }
     }
@@ -56,6 +59,8 @@ public class Ball : MonoBehaviour
     {
         if(other.TryGetComponent<CharacterComponent>(out var character))
         {
+            capture = true;
+            this.character = character;
             triggerCondition = character == spawner.correctCharacter;
             CustomCursor.Instance.SetCursorSprite(CursorState.Target);
         }
@@ -65,6 +70,7 @@ public class Ball : MonoBehaviour
     {
         if (other.TryGetComponent<CharacterComponent>(out var character))
         {
+            capture = false;
             if(character == spawner.correctCharacter) triggerCondition = false;
             CustomCursor.Instance.SetCursorSprite(CursorState.Arrow);
         }

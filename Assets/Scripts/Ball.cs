@@ -13,6 +13,10 @@ public class Ball : MonoBehaviour
     public float maxTimer = 5f;
     public bool triggerCondition, capture;
 
+    public AudioSource audioSource;
+    public AudioClip bounceClip;
+    public AudioClip releaseClip;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -52,6 +56,7 @@ public class Ball : MonoBehaviour
             portal.Stop();
             Instantiate(release, character.transform.position, Quaternion.identity);
             enabled = false;
+            audioSource.PlayOneShot(releaseClip);
         }
     }
 
@@ -74,5 +79,10 @@ public class Ball : MonoBehaviour
             if(character == spawner.correctCharacter) triggerCondition = false;
             CustomCursor.Instance.SetCursorSprite(CursorState.Arrow);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        audioSource.PlayOneShot(bounceClip);
     }
 }

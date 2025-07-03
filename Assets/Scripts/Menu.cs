@@ -27,6 +27,7 @@ public class Menu : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(1);
+        BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
     }
 
     public void Pause()
@@ -53,6 +54,9 @@ public class Menu : MonoBehaviour
 
         scoreText.text = gameResult == GameResult.Lose ? "0.00" : score.ToString("F2");
         highscoreText.text = highscore.ToString("F2");
+
+        if (gameResult == GameResult.Win) BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameWin);
+        if (gameResult == GameResult.Lose) BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameOver);
     }
 
     private void Score(float score)

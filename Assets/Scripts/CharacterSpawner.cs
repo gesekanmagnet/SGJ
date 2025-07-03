@@ -105,11 +105,13 @@ public class CharacterSpawner : MonoBehaviour
     {
         SpawnCount += 2;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
     }
 
     public void RestartLevel()
     {
         SpawnCount = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
     }
 }

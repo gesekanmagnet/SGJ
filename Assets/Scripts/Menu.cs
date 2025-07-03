@@ -31,7 +31,7 @@ public class Menu : MonoBehaviour
 
     public void Pause()
     {
-        pauseText.text = pause ? "Pause" : "Resume";
+        pauseText.text = pause ? "||" : ">>";
         Time.timeScale = pause ? 1.0f : 0.0f;
         pause = !pause;
     }

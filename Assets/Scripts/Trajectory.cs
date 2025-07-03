@@ -10,6 +10,7 @@ public class Trajectory : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     public float scaleYMin = 0.5f;
     public float scaleYMax = 3f;
     public float scaleSpeed = 5f;
+    public Timer timer;
 
     private Vector2 initialMousePos;
     private Vector3 originalScale;
@@ -82,6 +83,7 @@ public class Trajectory : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         trajectory.Hide();
         ballSpawned = true;
         CustomCursor.Instance.SetCursorSprite(CursorState.Arrow);
+        timer.StartTimer();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

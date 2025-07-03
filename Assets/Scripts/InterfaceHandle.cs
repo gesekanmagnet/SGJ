@@ -40,5 +40,5 @@ public class InterfaceHandle : MonoBehaviour
         EventCallback.OnScore -= UpdateScore;
     }
 
-    private void UpdateScore(float timeScore) => scoreText.text = timeScore.ToString("F2");
+    private void UpdateScore(float timeScore) => scoreText.text = ((int) (timeScore * 10)).ToString();
 }

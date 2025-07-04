@@ -84,6 +84,7 @@ public class Trajectory : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         ballSpawned = true;
         CustomCursor.Instance.SetCursorSprite(CursorState.Arrow);
         timer.StartTimer();
+        gameObject.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

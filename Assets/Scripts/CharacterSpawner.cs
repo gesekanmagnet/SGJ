@@ -114,4 +114,10 @@ public class CharacterSpawner : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
     }
+
+    public void BackMenu()
+    {
+        SpawnCount = 0;
+        SceneManager.LoadScene(0);
+    }
 }

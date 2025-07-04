@@ -1977,7 +1977,7 @@ MonoBehaviour:
   moveSpeed: 0.5
   turnSpeed: 120
   directionChangeInterval: 2
-  areaMin: {x: -15, y: -8}
+  areaMin: {x: -12.56, y: -8}
   areaMax: {x: 2, y: 9}
   margin: 2
 --- !u!65 &314777175140753486

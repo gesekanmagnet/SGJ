@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
     public TMP_Text gameResultText, scoreText, highscoreText;
 
     public bool pause;
-    private float score;
+    private int score => CharacterSpawner.Level;
 
     private void Awake()
     {
@@ -20,13 +20,11 @@ public class Menu : MonoBehaviour
 
     private void OnEnable()
     {
-        EventCallback.OnScore += Score;
         EventCallback.OnGameOver += Result;
     }
 
     private void OnDisable()
     {
-        EventCallback.OnScore -= Score;
         EventCallback.OnGameOver -= Result;
     }
 
@@ -44,7 +42,7 @@ public class Menu : MonoBehaviour
         resultPanel.SetActive(pause);
         backButton.SetActive(pause);
         gameResultText.text = "Pause";
-        highscoreText.text = PlayerPrefs.GetFloat("Highscore", 0f).ToString("F2");
+        highscoreText.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
         scoreText.text = 000.ToString();
     }
 
@@ -56,24 +54,19 @@ public class Menu : MonoBehaviour
         nextLevelButton.SetActive(gameResult == GameResult.Win);
         restartButton.SetActive(gameResult == GameResult.Lose);
 
-        float highscore = PlayerPrefs.GetFloat("Highscore", 0f);
-        if (score < highscore || highscore == 0)
+        int highscore = PlayerPrefs.GetInt("Highscore", 0);
+        if (score > highscore || highscore == 0)
         {
             highscore = score;
-            PlayerPrefs.SetFloat("Highscore", highscore);
+            PlayerPrefs.SetInt("Highscore", highscore);
             PlayerPrefs.Save();
         }
 
-        scoreText.text = gameResult == GameResult.Lose ? "0.00" : score.ToString("F2");
-        highscoreText.text = highscore.ToString("F2");
+        scoreText.text = gameResult == GameResult.Lose ? "00" : ((int)(score * 10)).ToString();
+        highscoreText.text = ((int)(highscore * 10)).ToString();
 
         if (gameResult == GameResult.Win) BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameWin);
         if (gameResult == GameResult.Lose) BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameOver);
-    }
-
-    private void Score(float score)
-    {
-        this.score = score;
     }
 
     public void Quit()

@@ -23,7 +23,7 @@ public class TrajectoryPredictor : MonoBehaviour
 
         Vector3 currentDir = direction.normalized;
         Vector3 currentPos = startPos;
-        float remainingDistance = maxDistance;
+        float remainingDistance = maxDistance - CharacterSpawner.SpawnCount * 1.5f;
 
         for (int i = 0; i < maxReflections; i++)
         {

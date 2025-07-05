@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,16 @@ public class CharacterComponent : MonoBehaviour
     public List<string> ids;
 
     public List<Variant> variants;
+
+    public Transform arrow;
+    
+    public void EnableArrow()
+    {
+        arrow.gameObject.SetActive(true);
+        arrow.DOMoveY(1.8f, 1f)
+         .SetEase(Ease.InOutSine)
+         .SetLoops(-1, LoopType.Yoyo);
+    }
 
     public void InitSkin(SkinData skin)
     {

@@ -10,7 +10,8 @@ public class CharacterSpawner : MonoBehaviour
     public CharacterComponent correctCharacter;
 
     public int spawnCount = 3;
-    private static int SpawnCount;
+    public static int SpawnCount;
+    public static int Level = 1;
     public Vector2 spawnRangeX = new(-7, 7);
     public Vector2 spawnRangeZ = new(-7, 7);
 
@@ -81,6 +82,22 @@ public class CharacterSpawner : MonoBehaviour
         correctCharacter = currentActiveCharacters[Random.Range(0, currentActiveCharacters.Count)];
     }
 
+    private void OnEnable()
+    {
+        EventCallback.OnGameOver += Result;
+    }
+
+    private void OnDisable()
+    {
+        EventCallback.OnGameOver -= Result;
+    }
+
+    private void Result(GameResult result)
+    {
+        if (result == GameResult.Lose)
+            correctCharacter.EnableArrow();
+    }    
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
@@ -103,6 +120,7 @@ public class CharacterSpawner : MonoBehaviour
     public void NextLevel()
     {
         SpawnCount += 2;
+        Level += 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
     }
@@ -110,6 +128,7 @@ public class CharacterSpawner : MonoBehaviour
     public void RestartLevel()
     {
         SpawnCount = 0;
+        Level = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
     }

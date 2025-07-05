@@ -2,7 +2,7 @@
 - Project name: SGJ
 - Unity version: Unity 2021.3.43f1
 - Active game object:
-  - Name: Hint_0 (1)
+  - Name: BaseCharacter
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Ignore Raycast
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

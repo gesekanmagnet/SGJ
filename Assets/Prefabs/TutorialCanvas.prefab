@@ -823,7 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.8}
+  m_Color: {r: 0.16862746, g: 0.16470589, b: 0.22745098, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1299,18 +1299,19 @@ MonoBehaviour:
   titleText: {fileID: 8247775836068898735}
   descriptionText: {fileID: 8247775836370804119}
   tutorialItems:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: dceb1b629f135044ca7cc7ddfa091926, type: 3}
     title: Hold
-    description: sdaskdaskldjasd
-  - sprite: {fileID: 0}
+    description: Press and hold the bow to summon your ghost and prepare your shot.
+  - sprite: {fileID: 21300000, guid: 953b6286bbd1d374598792a7e4ea2472, type: 3}
     title: Drag
-    description: bdgbdfgfdgdfgdfg
-  - sprite: {fileID: 0}
+    description: Drag to adjust your aim. Line up the shot with your target carefully.
+  - sprite: {fileID: 21300000, guid: 7ff6577053a4a854685df368b73a98e5, type: 3}
     title: Release
-    description: dvdfdsfdsfdsfdsf
-  - sprite: {fileID: 0}
+    description: Release your hold to launch the ghost toward your target!
+  - sprite: {fileID: 21300000, guid: 8db2e12aff9bbfa4dbcdaee43bd69a87, type: 3}
     title: Hit
-    description: fdfdsfrrnfnfhnfngfb
+    description: "If your ghost is in range, it\u2019ll strike the person right on
+      target!"
 --- !u!1 &8247775837565880317
 GameObject:
   m_ObjectHideFlags: 0

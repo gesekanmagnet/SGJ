@@ -1,8 +1,10 @@
 using DG.Tweening;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Ball : MonoBehaviour
 {
+    public float pitchVariation, pitchBase;
     public CharacterSpawner spawner;
     public ParticleSystem portal, release;
 
@@ -56,6 +58,7 @@ public class Ball : MonoBehaviour
             portal.Stop();
             Instantiate(release, character.transform.position, Quaternion.identity);
             enabled = false;
+            audioSource.pitch = 1;
             audioSource.PlayOneShot(releaseClip);
         }
     }
@@ -83,6 +86,9 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        float pitchVariationHalf = pitchVariation / 2;
+        float pitch = Random.Range(1, pitchBase) + Random.Range(-pitchVariationHalf, pitchVariationHalf);
+        audioSource.pitch = pitch;
         audioSource.PlayOneShot(bounceClip);
     }
 }

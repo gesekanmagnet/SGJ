@@ -47,8 +47,8 @@ public class Trajectory : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
             Vector3 direction = (targetWorldPos - spawnPos.position).normalized;
             trajectory.ShowTrajectory(spawnPos.position, direction);
             // ?? Rotasi panah agar mengarah ke target
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            trajectoryUI.rotation = Quaternion.Euler(0, 0, angle + 90f); // +90 jika panah default menghadap atas
+            float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+            trajectoryUI.rotation = Quaternion.Euler(0, 0, angle + 270f);
 
             // ?? Hitung jarak sebagai kekuatan visual
             float distance = direction.magnitude / 100f; // scaling ke UI

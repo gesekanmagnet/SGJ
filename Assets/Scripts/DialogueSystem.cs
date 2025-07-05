@@ -24,6 +24,7 @@ public class DialogueSystem : MonoBehaviour
     public Image leftCharacter;
     public Image rightCharacter;
     public TMP_Text dialogText;
+    public RectTransform shamanPos, simbol;
 
     public DialogLine[] dialogLines;
     private int currentIndex = 0;
@@ -101,6 +102,18 @@ public class DialogueSystem : MonoBehaviour
         if (currentIndex == 13) // dialog ke-15 (index dari 0)
         {
             ShakeRightCharacter();
+            simbol.GetComponent<CanvasGroup>().DOFade(0, .5f);
+        }
+
+        if(currentIndex == 4)
+        {
+            rightCharacter.rectTransform.DOAnchorPos(shamanPos.anchoredPosition, 1);
+        }
+
+        if(currentIndex == 10)
+        {
+            simbol.DOAnchorPos(new(0, 0), 1);
+            simbol.DOScale(1, 1);
         }
 
         // Hentikan typing sebelumnya jika ada
@@ -148,7 +161,7 @@ public class DialogueSystem : MonoBehaviour
 
             if (speaker == "left")
             {
-                SetImageAlpha(leftCharacter, 1f);
+                SetImageAlpha(leftCharacter, 1f, 2.5f);
                 SetImageAlpha(rightCharacter, 0.1f);
             }
             else if (speaker == "right")
@@ -176,9 +189,10 @@ public class DialogueSystem : MonoBehaviour
         );
     }
 
-    void SetImageAlpha(Image img, float alpha)
+    void SetImageAlpha(Image img, float alpha, float duration = .5f)
     {
-        img.DOFade(alpha, 0.5f); // Durasi 0.3 detik, bisa disesuaikan
+        img.DOComplete();
+        img.DOFade(alpha, duration);
     }
 
     public void OnClickNext()

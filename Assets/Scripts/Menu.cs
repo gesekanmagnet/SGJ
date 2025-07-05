@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     public bool pause;
     private float score;
 
-    private void Start()
+    private void Awake()
     {
         Time.timeScale = 1.0f;
         Cursor.visible = true;
@@ -57,7 +57,7 @@ public class Menu : MonoBehaviour
         restartButton.SetActive(gameResult == GameResult.Lose);
 
         float highscore = PlayerPrefs.GetFloat("Highscore", 0f);
-        if (score < highscore)
+        if (score < highscore || highscore == 0)
         {
             highscore = score;
             PlayerPrefs.SetFloat("Highscore", highscore);

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -32,11 +33,14 @@ public class DialogueSystem : MonoBehaviour
     public float typingDuration = 1.5f;
     private bool leftCharacterRevealed;
 
+    public UnityEvent onDialogueComplete;
+
     private void Awake()
     {
         if(firstTimePlay)
         {
             transform.parent.gameObject.SetActive(false);
+            BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
         }
     }
 
@@ -52,12 +56,16 @@ public class DialogueSystem : MonoBehaviour
         {
             audioSource.clip = leftVoice;
             audioSource.loop = true;
+            float randomStartTime = Random.Range(0f, audioSource.clip.length);
+            audioSource.time = randomStartTime;
             audioSource.Play();
         }
         else if (speaker == "right" && rightVoice != null)
         {
             audioSource.clip = rightVoice;
             audioSource.loop = true;
+            float randomStartTime = Random.Range(0f, audioSource.clip.length);
+            audioSource.time = randomStartTime;
             audioSource.Play();
         }
         else
@@ -80,6 +88,8 @@ public class DialogueSystem : MonoBehaviour
             dialogText.text = "";
             transform.parent.gameObject.SetActive(false);
             audioSource.Stop();
+            BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameplay);
+            onDialogueComplete?.Invoke();
             return;
         }
 

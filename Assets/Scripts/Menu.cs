@@ -75,4 +75,9 @@ public class Menu : MonoBehaviour
     {
         this.score = score;
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

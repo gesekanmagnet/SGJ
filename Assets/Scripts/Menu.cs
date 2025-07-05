@@ -1,3 +1,4 @@
+using Dan.Main;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -60,6 +61,9 @@ public class Menu : MonoBehaviour
             highscore = score;
             PlayerPrefs.SetInt("Highscore", highscore);
             PlayerPrefs.Save();
+            Leaderboards.ProjectSGJ2025.UploadNewEntry(PlayerPrefs.GetString("Username"), PlayerPrefs.GetInt("Highscore"), callback => {
+                Debug.Log($"{PlayerPrefs.GetString("Username")} score has been uploaded");
+            });
         }
 
         scoreText.text = gameResult == GameResult.Lose ? "00" : ((int)(score * 10)).ToString();

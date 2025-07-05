@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     public TMP_Text gameResultText, scoreText, highscoreText;
 
     public bool pause;
-    private int score => CharacterSpawner.Level;
+    private int score => CharacterSpawner.Level * 100 + InterfaceHandle.scoreTimer;
 
     private void Awake()
     {
@@ -66,8 +66,8 @@ public class Menu : MonoBehaviour
             });
         }
 
-        scoreText.text = gameResult == GameResult.Lose ? "00" : ((int)(score * 10)).ToString();
-        highscoreText.text = ((int)(highscore * 10)).ToString();
+        scoreText.text = gameResult == GameResult.Lose ? "00" : score.ToString();
+        highscoreText.text = highscore.ToString();
 
         if (gameResult == GameResult.Win) BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameWin);
         if (gameResult == GameResult.Lose) BGMPlayer.Instance.PlayBGM(BGMPlayer.Instance.bgmGameOver);

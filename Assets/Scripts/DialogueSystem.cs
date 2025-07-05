@@ -161,7 +161,7 @@ public class DialogueSystem : MonoBehaviour
 
             if (speaker == "left")
             {
-                SetImageAlpha(leftCharacter, 1f, 2.5f);
+                SetImageAlpha(leftCharacter, 1f, 1.5f);
                 SetImageAlpha(rightCharacter, 0.1f);
             }
             else if (speaker == "right")

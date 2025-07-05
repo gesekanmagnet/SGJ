@@ -10,6 +10,8 @@ public class InterfaceHandle : MonoBehaviour
 
     public TMP_Text scoreText;
 
+    public static int scoreTimer;
+
     private void Start()
     {
         List<Variant> tempList = new(spawner.correctCharacter.variants);
@@ -40,5 +42,9 @@ public class InterfaceHandle : MonoBehaviour
         EventCallback.OnScore -= UpdateScore;
     }
 
-    private void UpdateScore(float timeScore) => scoreText.text = ((int) (timeScore * 10)).ToString();
+    private void UpdateScore(float timeScore)
+    {
+        scoreTimer = 25 - Mathf.RoundToInt(timeScore);
+        scoreText.text = ((int)(timeScore * 10)).ToString();
+    }
 }

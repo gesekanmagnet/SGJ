@@ -17,7 +17,7 @@ public class Tutorial : MonoBehaviour
     {
         if (tutorialItems.Count > 0)
         {
-            Next();
+            UpdateContent();
         }
     }
 
